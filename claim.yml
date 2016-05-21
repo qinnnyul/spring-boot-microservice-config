@@ -1,0 +1,26 @@
+---
+
+spring:
+  profiles: dev
+  cloud:
+    config:
+      discovery:
+        enabled: true
+server:
+  port: 9002
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+eureka:
+  instance:
+    hostname: discovery
+    nonSecurePort: 80
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
