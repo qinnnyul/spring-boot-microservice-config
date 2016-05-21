@@ -17,8 +17,7 @@ endpoints:
     sensitive: false
 eureka:
   instance:
-    hostname: discovery
-    nonSecurePort: 80
+    hostname: claim
   client:
     registerWithEureka: true
     fetchRegistry: true
